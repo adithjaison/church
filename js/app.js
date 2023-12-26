@@ -23,16 +23,23 @@ const fireworks = new Fireworks(fireworkContainer, {
 const control_function = () => {
     fireworks.start()
     newYear.innerHTML = new Date().getFullYear()
-    document.querySelector('.header').style.visibility = 'visible';
+    document.addEventListener('DOMContentLoaded', function() {
+    var headerElement = document.querySelector('.header');
+    if (headerElement) {
+        headerElement.style.visibility = 'visible';
+    } else {
+        console.error("Element with class 'header' not found");
+    }
+    });
+
     document.querySelector('.timer').style.display = "none";
-    window.location.reload();
     clearInterval(countdownInterval)
 }
 
 const countdown = () => {
-    if(now.getFullYear() == '2022'){
+    if(now.getFullYear() == '2023'){
         document.querySelector('.header').style.display = "none";
-        console.log('2022');
+        console.log('2023');
         const now = new Date().getTime()
 
         const distance = countToDate - now
@@ -51,8 +58,8 @@ const countdown = () => {
             control_function()
             clearInterval(countdownInterval)
         }
-    } else if(now.getFullYear() == '2023'){
-        console.log('2023');
+    } else if(now.getFullYear() == '2024'){
+        console.log('2024');
         control_function()
     }
 }
