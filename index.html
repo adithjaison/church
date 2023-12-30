@@ -11,12 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/app.css">
+    <style>
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(-20px); }
+            50% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(20px); }
+        }
+
+        .header {
+            animation: fadeInOut 4s infinite;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="content-wrapper">
-        <p class="header" style="vertical-align:middle; text-align:center;">BETHEL NTCG <br />WISH YOU <br />A <br />HAPPY NEW YEAR</p>
+        <p class="header" style="vertical-align: middle; text-align: center; font-family: Impact, sans-serif;"><b>BETHEL NTCG</b></p>
+        <p class="header" style="vertical-align: middle; text-align: center; font-family: 'Monotype Corsiva', cursive;">WISH YOU <br />A</p>
+        <p class="header" style="vertical-align: middle; text-align: center; font-family: 'Rockwell Nova Extra Bold', sans-serif; font-weight: bold;">HAPPY NEW YEAR</p>
         <h1 class="year" id="new-year">0000</h1>
         <div class="timer">
             <div class="timer-box">
@@ -49,6 +62,14 @@
 
     <script src="./js/fireworks.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+        // Reset animation every 2 minutes
+        setInterval(function () {
+            document.querySelector('.header').style.animation = 'none';
+            void document.querySelector('.header').offsetWidth; // Trigger reflow
+            document.querySelector('.header').style.animation = null;
+        }, 120000); // 2 minutes in milliseconds
+    </script>
 </body>
 
 </html>
