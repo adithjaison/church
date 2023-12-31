@@ -49,7 +49,12 @@ body {
     font-size: 15rem;
     font-weight: 900;
     line-height: 1.5;
+    background-image: linear-gradient(to right, #ff5f6d, #ffc371, #48c6ef, #6f86d6, #fccb90, #d57eeb);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline;
 }
+
 
 .timer {
     display: flex;
