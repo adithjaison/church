@@ -21,16 +21,40 @@
         .header {
             animation: fadeInOut 4s infinite;
         }
+        .header {
+          vertical-align: middle;
+          text-align: center;
+          font-family: Impact, sans-serif;
+          display: inline;
+        }
+
+        .header span {
+          font-family: 'Monotype Corsiva', cursive;
+          background-image: linear-gradient(to right, #48c6ef, #6f86d6);
+          -webkit-background-clip: text;
+          color: transparent;
+          display: inline;
+        }
+
+        .header span:last-child {
+          font-family: 'Rockwell Nova Extra Bold', sans-serif;
+          font-weight: bold;
+          background-image: linear-gradient(to right, #fccb90, #d57eeb);
+          -webkit-background-clip: text;
+          color: transparent;
+          display: inline;
+          font-size: 10rem;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="content-wrapper">
-        <p class="header" style="vertical-align: middle; text-align: center; font-family: Impact, sans-serif;">
-          <b>BETHEL NTCG, Wirral</b><br>
-          <span style="font-family: 'Monotype Corsiva', cursive;">WISHING YOU <br> A</span><br>
-          <span style="font-family: 'Rockwell Nova Extra Bold', sans-serif; font-weight: bold;">HAPPY NEW YEAR</span>
+        <p class="header">
+          <b>BETHEL NTCG, WIRRAL</b><br>
+          <span>WISHING YOU <br> A</span><br>
+          <span>HAPPY NEW YEAR</span>
         </p>
         <h1 class="year" id="new-year">0000</h1>
         <div class="timer">
